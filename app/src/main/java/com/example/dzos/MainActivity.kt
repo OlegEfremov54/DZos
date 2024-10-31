@@ -45,14 +45,14 @@ class MainActivity : AppCompatActivity() {
     override fun onContextItemSelected(item: MenuItem): Boolean {
 //var a:Int=textET.text.toInt()
         when(item.itemId){
-            R.id.chen_color-> when(textET) {
+            R.id.chen_color-> when(textET.toString().toInt()) {
 
-                "1" -> {
+                1 -> {
                     textET.setBackgroundColor(R.color.orange)
                     Toast.makeText(this, "ОРАНЖЕВЫЙ цвет оценки ", Toast.LENGTH_SHORT).show()
                 }
 
-                "2" -> {
+                2 -> {
                     textET.setBackgroundColor(R.color.yellow)
                     Toast.makeText(this, "ЖЕЛТЫЙ цвет оценки ", Toast.LENGTH_SHORT).show()
                 }
@@ -71,13 +71,14 @@ class MainActivity : AppCompatActivity() {
                     textET.setBackgroundColor(R.color.red)
                     Toast.makeText(this, "КРАСНЫЙ цвет оценки ", Toast.LENGTH_SHORT).show()
                 }
-                else {textET.setBackgroundColor(R.color.white)
+                else ->{textET.setBackgroundColor(R.color.white)
                     Toast.makeText(this, "Введите оценку от 1 до 5", Toast.LENGTH_SHORT).show()
                 }
             }
             R.id.clean->{
-                textET.setBackgroundColor(R.color.white)
+
                 textET.text.clear()
+                textET.setBackgroundColor(R.color.white)
                 Toast.makeText(this, "Очистка поля ввода", Toast.LENGTH_SHORT).show()
             }
             R.id.exit->{
