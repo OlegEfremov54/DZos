@@ -25,4 +25,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/randomBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Случайное число"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/randomTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/randomTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/randomBTN"
+        app:layout_constraintVertical_bias="0.1"/>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
